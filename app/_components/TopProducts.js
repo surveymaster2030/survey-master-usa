@@ -46,7 +46,7 @@ export default function TopProducts() {
         {products.map((product, index) => (
           <div
             key={index}
-            className="relative w-52 overflow-hidden rounded-xl p-4 text-center shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:shadow-md"
+            className="relative w-52 overflow-hidden rounded-md p-4 text-center shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:shadow-md"
           >
             <div className="absolute inset-0 top-0 -z-9 h-28 bg-white"></div>
             <div className="bg-light_beige absolute inset-0 bottom-0 -z-10 h-full"></div>
@@ -58,8 +58,9 @@ export default function TopProducts() {
               <Image
                 src={product.image}
                 alt={product.title}
-                layout="fill"
-                objectFit="contain"
+                width={100}
+                height={200}
+                style={{ width: "80%", height: "100%", marginLeft: "10%" }}
               />
             </div>
           </div>

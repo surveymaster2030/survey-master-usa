@@ -14,7 +14,7 @@ export default function TopHeader() {
       <Image
         src="/logo.png"
         alt="logo"
-        className="p-5"
+        className="p-3"
         width={261}
         height={71}
       />

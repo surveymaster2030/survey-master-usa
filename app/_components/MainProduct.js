@@ -4,17 +4,17 @@ import Link from "next/link";
 export default function MainProduct() {
   return (
     <section className="container mx-auto">
-      <div className="mx-auto mt-28 items-center justify-center sm:flex lg:max-w-7/10">
+      <div className="mx-auto mt-28 flex flex-col items-center justify-center md:flex-row lg:max-w-7/10">
         <div className="relative mr-12 w-full lg:w-2/5">
           <Image
-            className="w-full rounded-full"
+            className="relative z-1 w-full rounded-full"
             src="/images/mainProductCover.png"
             width={500}
             height={500}
             alt="main product cover"
           />
           <Image
-            className="mt-[-150px] rounded-full border-8 border-white outline-8"
+            className="relative z-3 mt-[-150px] rounded-full border-8 border-white"
             src="/images/mainProductPic.png"
             width={250}
             height={250}

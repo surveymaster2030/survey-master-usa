@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function LatestProducts({ item }) {
   return (
-    <div className="flex h-50 w-full items-center justify-center overflow-hidden rounded-xl bg-white px-4 pt-4 shadow-2xl shadow-gray-400 transition-transform duration-300 hover:-translate-y-2">
+    <div className="flex h-50 w-full items-center justify-center overflow-hidden rounded-md bg-white px-4 pt-4 shadow-2xl shadow-gray-400 transition-transform duration-300 hover:-translate-y-2">
       <Image
-        style={{ width: "100%", height: "auto" }}
+        style={{ width: "100%", height: "100%" }}
         src={item.imageURL}
         width={100}
         height={300}
