@@ -1,0 +1,17 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "SNCC",
+      "products": [
+        {
+          "id": 101,
+          "name": "هاتف ذكي",
+          "description": "هاتف ذكي بمواصفات ممتازة",
+          "price": 2500,
+          "image": "/images/phone.jpg"
+        }
+      ]
+    }
+  ]
+}
