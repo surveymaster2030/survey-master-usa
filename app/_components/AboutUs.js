@@ -3,7 +3,7 @@ import { CheckCircle } from "lucide-react";
 
 export default function AboutUs() {
   return (
-    <section className="mx-auto flex w-full max-w-3/4 flex-col items-center gap-8 px-4 py-12 md:flex-row">
+    <section className="mx-auto flex w-full flex-col items-center gap-8 px-4 py-12 md:flex-row lg:max-w-3/4">
       <div className="relative w-full md:w-1/2">
         <div className="bg-primary absolute -top-2.5 -right-2.5 -z-10 h-72 w-48 rounded-tr-md"></div>
         <Image
@@ -16,7 +16,7 @@ export default function AboutUs() {
       </div>
       <div className="relative md:w-1/2">
         <h4 className="mb-2 font-medium text-orange-500">About Us</h4>
-        <h2 className="mb-4 text-3xl font-bold text-[#003b5b] md:text-4xl">
+        <h2 className="mb-4 text-3xl font-extrabold text-[#003b5b] md:text-4xl">
           Why Choose <br />
           SURVAY MASTER
         </h2>
@@ -26,39 +26,38 @@ export default function AboutUs() {
           which don’t look even.
         </p>
 
-        {/* عناصر المميزات */}
         <div className="space-y-4">
-          <Feature
-            iconColor="bg-green-500"
-            title="After-sales services"
-            desc="There are variation You need to be sure there is anything hidden in the middle of text."
-          />
-          <Feature
-            iconColor="bg-yellow-400"
-            title="All your devices in one place"
-            desc="There are variation You need to be sure there is anything hidden in the middle of text."
-          />
-          <Feature
-            iconColor="bg-yellow-500"
-            title="Quality Products"
-            desc="There are variation You need to be sure there is anything hidden in the middle of text."
-          />
+          <ul className="list-none space-y-1">
+            <li className="relative flex-row items-start pl-6 before:absolute before:top-1 before:left-0 before:h-4 before:w-4 before:bg-[url('/images/checkicon.png')] before:bg-contain before:bg-no-repeat before:content-['']">
+              <h4 className="text-secondary text-xl font-bold">
+                After-sales services
+              </h4>
+              <p className="text-sm text-gray-500">
+                There are variation You need to be sure there is anything hidden
+                in the middle of text.
+              </p>
+            </li>
+            <li className="relative flex-row items-start pl-6 before:absolute before:top-1 before:left-0 before:h-4 before:w-4 before:bg-[url('/images/checkicon.png')] before:bg-contain before:bg-no-repeat before:content-['']">
+              <h4 className="text-secondary text-xl font-bold">
+                All your devices in one place
+              </h4>
+              <p className="text-sm text-gray-500">
+                There are variation You need to be sure there is anything hidden
+                in the middle of text.
+              </p>
+            </li>
+            <li className="relative flex-row items-start pl-6 before:absolute before:top-1 before:left-0 before:h-4 before:w-4 before:bg-[url('/images/checkicon.png')] before:bg-contain before:bg-no-repeat before:content-['']">
+              <h4 className="text-secondary text-xl font-bold">
+                Quality Products
+              </h4>
+              <p className="text-sm text-gray-500">
+                There are variation You need to be sure there is anything hidden
+                in the middle of text.
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
   );
 }
-
-const Feature = ({ iconColor, title, desc }) => (
-  <div className="flex items-start gap-4">
-    <div
-      className={`flex h-8 w-8 items-center justify-center rounded-full ${iconColor}`}
-    >
-      <CheckCircle className="h-5 w-5 text-white" />
-    </div>
-    <div>
-      <h4 className="font-semibold text-[#003b5b]">{title}</h4>
-      <p className="text-sm text-gray-500">{desc}</p>
-    </div>
-  </div>
-);

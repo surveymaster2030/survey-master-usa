@@ -4,8 +4,8 @@ import Link from "next/link";
 export default function MainProduct() {
   return (
     <section className="container mx-auto">
-      <div className="mx-auto mt-28 flex flex-col items-center justify-center md:flex-row lg:max-w-7/10">
-        <div className="relative mr-12 w-full lg:w-2/5">
+      <div className="mx-auto mt-28 flex flex-col items-center justify-center px-5 md:flex-row lg:max-w-7/10">
+        <div className="relative w-full lg:mr-12 lg:w-2/5">
           <Image
             className="relative z-1 w-full rounded-full"
             src="/images/mainProductCover.png"

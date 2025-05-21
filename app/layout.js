@@ -2,6 +2,7 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_components/Navbar";
 import TopHeader from "./_components/TopHeader";
+import Footer from "./_components/Footer";
 
 const manrope = Manrope({
   variable: "--font-Manrope",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
           <Navbar />
         </header>
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

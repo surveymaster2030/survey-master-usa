@@ -1,3 +1,5 @@
+import { categories } from "@/data/categories";
+
 const categoryData = {
   GNSSSysyem: {
     title: "GNSS Systems",
@@ -14,11 +16,11 @@ const categoryData = {
 };
 
 export default async function page({ params }) {
-  const { catName } = await params;
-  const category = categoryData[catName];
+  const { slug } = await params;
+  const category = categoryData[slug];
 
   if (!category) {
-    return <h2>القسم غير موجود</h2>;
+    return <h2>Not Found</h2>;
   }
 
   return (

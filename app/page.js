@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
-      <section className="relative z-10 mt-[-50px] flex w-full items-center justify-center lg:container lg:mx-auto">
+      <section className="relative z-10 mt-[-50px] flex w-full items-center justify-center px-4 lg:container lg:mx-auto">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
           {latestPro.map((item) => (
             <LatestProducts key={item.id} item={item} />

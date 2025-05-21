@@ -1,26 +1,35 @@
 // components/TopProductsSection.tsx
+"use client";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination, Autoplay } from "swiper/modules";
 
 const products = [
   {
     title: "eTS2",
     subtitle: "Total Station",
-    image: "/images/device1.png",
+    image: "/images/device4.png",
   },
   {
     title: "eScan M1",
     subtitle: "Handheld Lidar Scanner",
-    image: "/images/device2.png",
+    image: "/images/device5.png",
   },
   {
     title: "eTS5",
     subtitle: "Total Station",
-    image: "/images/device3.png",
+    image: "/images/device6.png",
   },
   {
     title: "eTS2",
     subtitle: "Total Station",
-    image: "/images/device1.png",
+    image: "/images/device4.png",
   },
 ];
 
@@ -42,29 +51,59 @@ export default function TopProducts() {
         </h2>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6 px-4">
-        {products.map((product, index) => (
-          <div
-            key={index}
-            className="relative w-52 overflow-hidden rounded-md p-4 text-center shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:shadow-md"
-          >
-            <div className="absolute inset-0 top-0 -z-9 h-28 bg-white"></div>
-            <div className="bg-light_beige absolute inset-0 bottom-0 -z-10 h-full"></div>
-            <h3 className="text-secondary mb-1 text-xl font-extrabold">
-              {product.title}
-            </h3>
-            <p className="text-mint_green mb-4 text-xs">{product.subtitle}</p>
-            <div className="relative mx-auto h-48 w-full">
-              <Image
-                src={product.image}
-                alt={product.title}
-                width={100}
-                height={200}
-                style={{ width: "80%", height: "100%", marginLeft: "10%" }}
-              />
-            </div>
-          </div>
-        ))}
+      <div className="flex w-full justify-center px-4 lg:mx-auto lg:max-w-3/5">
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={10}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
+          modules={[Pagination, Autoplay]}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          className="mySwiper overflow-visible"
+        >
+          {products.map((product, index) => (
+            <SwiperSlide
+              key={index}
+              className="relative h-16 w-52 overflow-hidden rounded-md p-4 text-center shadow-sm hover:shadow-md"
+            >
+              <div className="absolute inset-0 top-0 -z-9 h-28 bg-white"></div>
+              <div className="bg-light_beige absolute inset-0 bottom-0 -z-10 h-full"></div>
+              <h3 className="text-secondary mb-1 text-xl font-extrabold">
+                {product.title}
+              </h3>
+              <p className="text-mint_green mb-4 text-xs">{product.subtitle}</p>
+              <div className="relative mx-auto h-auto w-full">
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  width={200}
+                  height={400}
+                  style={{ width: "100%", height: "100%" }}
+                  className="transition-transform duration-500 hover:scale-120"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
