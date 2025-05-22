@@ -7,29 +7,13 @@ export function generateStaticParams() {
   }));
 }
 
-const categoryData = {
-  GNSSSysyem: {
-    title: "GNSS Systems",
-    products: ["prod1", "prod2", "prod3"],
-  },
-  SLAM: {
-    title: "SLAM",
-    products: ["prod1", "prod2", "prod3"],
-  },
-  MachineControlSolutions: {
-    title: "Machine Control Solutions",
-    products: ["prod1", "prod2", "prod3"],
-  },
-};
-
 export default async function page({ params }) {
   const { slug } = await params;
   const category = categories.find((c) => c.slug === slug);
+
   if (!category) return <div className="p-4">Not Found</div>;
+
   const filteredProducts = products.filter((p) => p.categoryId === category.id);
-  console.log("params.slug:", slug);
-  console.log("category found:", category);
-  console.log("filtered products:", filteredProducts);
 
   return (
     <div>
@@ -40,6 +24,7 @@ export default async function page({ params }) {
             <img
               src={product.image}
               className="mb-2 h-40 w-full object-cover"
+              alt="product pic"
             />
             <h2 className="text-lg font-semibold">{product.name}</h2>
             <p className="text-sm text-gray-500">{product.description}</p>

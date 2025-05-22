@@ -1,11 +1,11 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import { Menu, X } from "lucide-react";
 
 import { categories } from "@/data/categories";
-
-import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { Menu, X, House } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -42,7 +42,6 @@ export default function Navbar() {
         ))}
       </ul>
 
-      {/* ✅ أيقونة الهامبرجر في الشاشات الصغيرة */}
       <div className="flex items-center justify-between p-4 lg:hidden">
         <button
           onClick={() => setIsOpen((prev) => !prev)}
@@ -52,7 +51,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* ✅ القائمة الجانبية للموبايل */}
       <div
         className={`fixed top-0 right-0 z-50 h-full w-64 transform bg-[#194755] text-white transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"

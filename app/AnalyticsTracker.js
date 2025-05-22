@@ -1,4 +1,4 @@
-"use client"; // ← مهم جدًا لأنه كومبوننت متصفح
+"use client";
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";

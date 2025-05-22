@@ -73,7 +73,7 @@ export default function HeroSlider() {
       </Swiper>
 
       {/* Pagination bullets*/}
-      <div className="custom-pagination pointer-events-auto absolute top-1/2 left-8 z-50 -translate-y-1/2 flex-col gap-4"></div>
+      <div className="custom-pagination pointer-events-auto absolute top-1/2 left-8 z-50 flex -translate-y-1/2 flex-col gap-4"></div>
 
       {/* arrows */}
       <div className="absolute top-1/2 right-6 z-50 flex -translate-y-1/2 flex-col gap-4">

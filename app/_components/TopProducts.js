@@ -51,7 +51,7 @@ export default function TopProducts() {
         </h2>
       </div>
 
-      <div className="flex w-full justify-center px-4 lg:mx-auto lg:max-w-3/5">
+      <div className="mx-auto flex w-full justify-center px-4 md:max-w-4/5 lg:max-w-3/5">
         <Swiper
           slidesPerView={1}
           spaceBetween={10}
@@ -67,7 +67,7 @@ export default function TopProducts() {
               slidesPerView: 3,
               spaceBetween: 20,
             },
-            1024: {
+            1300: {
               slidesPerView: 4,
               spaceBetween: 20,
             },
