@@ -1,38 +1,40 @@
 "use client";
 import Link from "next/link";
+
+import { categories } from "@/data/categories";
+
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X, House } from "lucide-react";
 
-const navLinks = [
-  { name: "Home", link: "/" },
-  { name: "GNSS Systems", link: "/categories/GNSSSysyem" },
-  { name: "SLAM", link: "/categories/SLAM" },
-  // {
-  //   name: "Machine Control Solutions",
-  //   link: "/categories/MachineControlSolutions",
-  // },
-  { name: "Precision Agriculture", link: "/categories/PrecisionAgriculture" },
-  { name: "Marine Systems", link: "/categories/MarineSystems" },
-  { name: "Optical Systems", link: "/categories/OpticalSystems" },
-  { name: "Radio & Antenna", link: "/categories/Radio&Antenna" },
-];
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav className="from-primary text-secondary relative bg-gradient-to-t to-amber-500">
-      {/* ✅ المينيو في الشاشات الكبيرة */}
       <ul className="divide-primary container mx-auto hidden justify-center divide-x lg:flex">
-        {navLinks.map((item) => (
-          <li key={item.name} className="">
+        <li>
+          <Link
+            href="/"
+            className={`group hover:bg-secondary [.active]:bg-secondary relative block h-full w-full cursor-pointer p-5 text-sm font-semibold ${
+              pathname === "/" ? "active" : ""
+            }`}
+          >
+            <span className="transition duration-300 group-hover:text-amber-100 group-[.active]:text-amber-100">
+              Home
+            </span>
+            <span className="bg-primary absolute bottom-1 left-0 h-0.5 w-0 transition-all duration-500 group-hover:w-full group-[.active]:w-full"></span>
+          </Link>
+        </li>
+        {categories.map((category) => (
+          <li key={category.id} className="">
             <Link
               prefetch={true}
-              href={item.link}
-              className={`group hover:bg-secondary [.active]:bg-secondary relative block h-full w-full cursor-pointer p-5 text-sm font-semibold ${pathname === `${item.link}` ? "active" : ""}`}
+              href={`/categories/${category.slug}`}
+              className={`group hover:bg-secondary [.active]:bg-secondary relative block h-full w-full cursor-pointer p-5 text-sm font-semibold ${pathname === `/categories/${category.slug}` ? "active" : ""}`}
             >
               <span className="transition duration-300 group-hover:text-amber-100 group-[.active]:text-amber-100">
-                {item.name}
+                {category.name}
               </span>
               <span className="bg-primary absolute bottom-1 left-0 h-0.5 w-0 transition-all duration-500 group-hover:w-full group-[.active]:w-full"></span>
             </Link>
@@ -62,14 +64,14 @@ export default function Navbar() {
           </button>
         </div>
         <ul className="flex flex-col gap-4 px-6">
-          {navLinks.map((item) => (
-            <li key={item.name}>
+          {categories.map((category) => (
+            <li key={category.id}>
               <Link
-                href={item.link}
+                href={category.slug}
                 className="block rounded px-2 py-2 hover:bg-amber-600"
                 onClick={() => setIsOpen(false)}
               >
-                {item.name}
+                {category.name}
               </Link>
             </li>
           ))}
