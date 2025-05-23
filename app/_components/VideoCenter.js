@@ -21,9 +21,8 @@ export default function VideoCenter() {
         <div className="relative z-10 mt-8 w-full">
           <div className="bg-primary absolute -top-2.5 -left-2.5 -z-10 h-72 w-48 rounded-tl-md"></div>
           <iframe
-            src="https://www.youtube.com/embed/OjVqJuPGyCI?si=oH_1iJiTQRvPskk7?modestbranding=1&rel=0"
+            src="https://www.youtube-nocookie.com/embed/OjVqJuPGyCI"
             allowFullScreen
-            enablejsapi="false"
             width="100%"
             height="500px"
             loading="lazy"

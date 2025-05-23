@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -10,13 +10,14 @@ import { categories } from "@/data/categories";
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="from-primary text-secondary relative bg-gradient-to-t to-amber-500">
       <ul className="divide-primary container mx-auto hidden justify-center divide-x lg:flex">
         <li>
           <Link
             href="/"
-            className={`group hover:bg-secondary [.active]:bg-secondary relative block h-full w-full cursor-pointer p-5 text-sm font-semibold ${
+            className={`group hover:bg-secondary [.active]:bg-secondary relative block h-full w-full cursor-pointer p-5 text-sm font-extrabold ${
               pathname === "/" ? "active" : ""
             }`}
           >
@@ -31,7 +32,7 @@ export default function Navbar() {
             <Link
               prefetch={true}
               href={`/categories/${category.slug}`}
-              className={`group hover:bg-secondary [.active]:bg-secondary relative block h-full w-full cursor-pointer p-5 text-sm font-semibold ${pathname === `/categories/${category.slug}` ? "active" : ""}`}
+              className={`group hover:bg-secondary [.active]:bg-secondary relative block h-full w-full cursor-pointer p-5 text-sm font-extrabold ${pathname === `/categories/${category.slug}` ? "active" : ""}`}
             >
               <span className="transition duration-300 group-hover:text-amber-100 group-[.active]:text-amber-100">
                 {category.name}
@@ -62,10 +63,20 @@ export default function Navbar() {
           </button>
         </div>
         <ul className="flex flex-col gap-4 px-6">
+          <li>
+            <Link
+              href="/"
+              className="block rounded px-2 py-2 hover:bg-amber-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Home
+            </Link>
+          </li>
           {categories.map((category) => (
             <li key={category.id}>
               <Link
-                href={category.slug}
+                prefetch={true}
+                href={`/categories/${category.slug}`}
                 className="block rounded px-2 py-2 hover:bg-amber-600"
                 onClick={() => setIsOpen(false)}
               >

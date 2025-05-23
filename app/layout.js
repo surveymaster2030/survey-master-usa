@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "./_components/Navbar";
 import TopHeader from "./_components/TopHeader";
 import Footer from "./_components/Footer";
+import PageTransitionLoader from "./_components/PageTransitionLoader";
 
 import { AnalyticsTracker } from "./AnalyticsTracker";
 const GA_MEASUREMENT_ID = "G-9D4B5DME8M";
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
           <Navbar />
         </header>
         <main>
+          {/* <PageTransitionLoader /> */}
           <AnalyticsTracker />
           {children}
         </main>
