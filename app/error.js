@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function Error({ error, reset }) {
@@ -23,14 +24,14 @@ export default function Error({ error, reset }) {
           d="M12 9v2m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"
         />
       </svg>
-      <h2 className="mb-2 text-3xl font-bold text-red-700">حدث خطأ ما!</h2>
-      <p className="mb-6 max-w-md text-center text-red-600">{error.message}</p>
-      <button
-        onClick={() => reset()}
-        className="rounded-md bg-red-600 px-6 py-3 text-white shadow-md transition hover:bg-red-700"
+      <h2 className="mb-2 text-3xl font-bold text-red-700">Error Occured !</h2>
+      {/* <p className="mb-6 max-w-md text-center text-red-600">{error.message}</p> */}
+      <Link
+        href="/"
+        className="mt-10 rounded-md bg-red-600 px-6 py-3 text-white shadow-md transition hover:bg-red-700"
       >
-        حاول مرة أخرى
-      </button>
+        Go To Home
+      </Link>
     </div>
   );
 }

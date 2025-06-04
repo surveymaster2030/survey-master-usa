@@ -13,8 +13,8 @@ export default function Navbar() {
 
   return (
     <nav className="from-primary text-secondary relative bg-gradient-to-t to-amber-500">
-      <ul className="divide-primary container mx-auto hidden justify-center divide-x lg:flex">
-        <li>
+      <ul className="divide-primary container mx-auto hidden items-stretch justify-center divide-x lg:flex">
+        {/* <li>
           <Link
             href="/"
             className={`group hover:bg-secondary [.active]:bg-secondary relative block h-full w-full cursor-pointer p-5 text-sm font-extrabold ${
@@ -26,7 +26,7 @@ export default function Navbar() {
             </span>
             <span className="bg-primary absolute bottom-1 left-0 h-0.5 w-0 transition-all duration-500 group-hover:w-full group-[.active]:w-full"></span>
           </Link>
-        </li>
+        </li> */}
         {categories.map((category) => (
           <li key={category.id} className="">
             <Link
@@ -63,7 +63,7 @@ export default function Navbar() {
           </button>
         </div>
         <ul className="flex flex-col gap-4 px-6">
-          <li>
+          {/* <li>
             <Link
               href="/"
               className="block rounded px-2 py-2 hover:bg-amber-600"
@@ -71,7 +71,7 @@ export default function Navbar() {
             >
               Home
             </Link>
-          </li>
+          </li> */}
           {categories.map((category) => (
             <li key={category.id}>
               <Link

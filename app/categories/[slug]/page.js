@@ -19,7 +19,7 @@ export default async function page({ params }) {
   );
 
   return (
-    <div>
+    <div className="w-full lg:mx-auto lg:max-w-4/5">
       <h1>{category.name}</h1>
       <div className="grid grid-cols-2 gap-4">
         {filteredProducts.map((product) => (
@@ -31,7 +31,7 @@ export default async function page({ params }) {
             <Image
               width={300}
               height={200}
-              src={product.image}
+              src={product.images[0]}
               className="mb-2 h-40 w-full object-cover"
               alt="product pic"
             />

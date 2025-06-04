@@ -12,6 +12,30 @@ const latestPro = [
   { id: "02", name: "eTS8", cat: "GNSS", imageURL: "/images/device2.png" },
   { id: "03", name: "eTS8", cat: "GNSS", imageURL: "/images/device3.png" },
 ];
+
+export const metadata = {
+  title: {
+    default: "Survey Master - Home",
+    template: "%s | Survey Master",
+  },
+  description: "When you can collect all surveying tools from one place.",
+  openGraph: {
+    title: "Survey Master - Home",
+    description: "When you can collect all surveying tools from one place.",
+    url: "https://survay-master.vercel.app",
+    siteName: "Survey Master",
+    images: [
+      {
+        url: "images/device1.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
+
 export default function Home() {
   return (
     <>

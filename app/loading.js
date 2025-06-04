@@ -1,7 +1,7 @@
 "use client";
 export default function Loading() {
   return (
-    <div className="bg-opacity-10 fixed inset-0 z-50 flex items-center justify-center bg-gray-900/70">
+    <div className="bg-opacity-10 fixed inset-0 z-50 flex items-center justify-center bg-gray-900/50">
       <div className="flex h-16 items-end space-x-1">
         {[...Array(5)].map((_, i) => (
           <span

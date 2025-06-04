@@ -7,17 +7,20 @@ import {
   MapPin,
   Mails,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function TopHeader() {
   return (
     <div className="container mx-auto flex items-center justify-around">
-      <Image
-        src="/logo.png"
-        alt="logo"
-        className="p-3"
-        width={261}
-        height={71}
-      />
+      <Link href="/">
+        <Image
+          src="/logo.png"
+          alt="logo"
+          className="p-3"
+          width={261}
+          height={71}
+        />
+      </Link>
       <div className="hidden space-x-3 lg:flex">
         <div className="flex items-center justify-center space-x-2">
           <a
