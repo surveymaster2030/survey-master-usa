@@ -12,7 +12,7 @@ import Link from "next/link";
 export default function TopHeader() {
   return (
     <div className="container mx-auto flex items-center justify-around">
-      <Link href="/">
+      <Link href="/" className="ml-14 lg:ml-0">
         <Image
           src="/logo.png"
           alt="logo"

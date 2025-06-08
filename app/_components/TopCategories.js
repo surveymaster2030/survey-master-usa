@@ -1,6 +1,7 @@
 // components/TopProductsSection.tsx
 "use client";
 import Image from "next/image";
+import { categories } from "@/data/categories";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -9,6 +10,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination, Autoplay } from "swiper/modules";
+import Link from "next/link";
 
 const products = [
   {
@@ -92,23 +94,6 @@ export default function TopCategories() {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* {products.map((product, index) => (
-          <div
-            key={index}
-            className="relative h-110 w-72 overflow-hidden rounded-md shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:shadow-md"
-          >
-            <h2 className="absolute bottom-10 left-10 w-20 text-2xl font-bold text-white">
-              {product.title}
-            </h2>
-            <Image
-              src={product.image}
-              alt={product.title}
-              style={{ width: "100%", height: "100%" }}
-              width={200}
-              height={400}
-            />
-          </div>
-        ))} */}
       </div>
     </section>
   );

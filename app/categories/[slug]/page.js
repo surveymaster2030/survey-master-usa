@@ -19,27 +19,55 @@ export default async function page({ params }) {
   );
 
   return (
-    <div className="w-full lg:mx-auto lg:max-w-4/5">
-      <h1>{category.name}</h1>
-      <div className="grid grid-cols-2 gap-4">
-        {filteredProducts.map((product) => (
-          <Link
-            href={`/products/${product.slug}`}
-            key={product.id}
-            className="rounded-xl border p-4"
-          >
-            <Image
-              width={300}
-              height={200}
-              src={product.images[0]}
-              className="mb-2 h-40 w-full object-cover"
-              alt="product pic"
-            />
-            <h2 className="text-lg font-semibold">{product.name}</h2>
-            <p className="text-sm text-gray-500">{product.description}</p>
-          </Link>
-        ))}
+    <div className="w-full px-5 lg:mx-auto lg:max-w-4/5 lg:px-0">
+      {/* <h1 className="text-secondary my-2.5 rounded-md bg-amber-100 p-3 font-bold tracking-widest">
+        {category.name}
+      </h1> */}
+      <div className="text-secondary my-3 flex w-full gap-4 rounded-md bg-amber-100 p-3 text-sm font-bold tracking-wide">
+        <Link href="/">Home</Link>
+        <span>/</span> <span className="font-bold">{category.name}</span>
       </div>
+      {filteredProducts.length > 0 ? (
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          {filteredProducts.map((product) => (
+            <div
+              key={product.id}
+              className="flex flex-col items-start gap-4 rounded-md border border-gray-200 bg-gray-50 p-4 lg:flex-row"
+            >
+              <Image
+                width={400}
+                height={550}
+                src={product.images[0]}
+                className="h-full w-full rounded-md bg-gray-200 object-cover lg:w-1/3"
+                alt={product.name}
+              />
+              <div className="flex h-full w-full flex-col justify-between lg:w-2/3">
+                <div>
+                  <h2 className="text-secondary text-2xl font-extrabold">
+                    {product.name}
+                  </h2>
+                  <h4 className="text-md mb-3 font-semibold text-gray-500">
+                    {product.subName}
+                  </h4>
+                  <p className="line-clamp-5 text-sm/6 text-gray-500">
+                    {product.description[0]}
+                  </p>
+                </div>
+                <Link
+                  href={`/products/${product.slug}`}
+                  className="bg-mint_green/70 mt-6 w-fit rounded-md px-8 py-4 text-xs font-medium tracking-wider text-white transition-all duration-300 hover:px-10"
+                >
+                  More Details
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p className="mt-6 rounded p-4 text-center text-lg text-red-600">
+          No products in this category at the moment
+        </p>
+      )}
     </div>
   );
 }

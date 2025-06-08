@@ -12,27 +12,14 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="from-primary text-secondary relative bg-gradient-to-t to-amber-500">
+    <nav className="from-primary text-secondary relative h-0.5 bg-gradient-to-t to-amber-500 lg:h-auto">
       <ul className="divide-primary container mx-auto hidden items-stretch justify-center divide-x lg:flex">
-        {/* <li>
-          <Link
-            href="/"
-            className={`group hover:bg-secondary [.active]:bg-secondary relative block h-full w-full cursor-pointer p-5 text-sm font-extrabold ${
-              pathname === "/" ? "active" : ""
-            }`}
-          >
-            <span className="transition duration-300 group-hover:text-amber-100 group-[.active]:text-amber-100">
-              Home
-            </span>
-            <span className="bg-primary absolute bottom-1 left-0 h-0.5 w-0 transition-all duration-500 group-hover:w-full group-[.active]:w-full"></span>
-          </Link>
-        </li> */}
         {categories.map((category) => (
           <li key={category.id} className="">
             <Link
               prefetch={true}
               href={`/categories/${category.slug}`}
-              className={`group hover:bg-secondary [.active]:bg-secondary relative block h-full w-full cursor-pointer p-5 text-sm font-extrabold ${pathname === `/categories/${category.slug}` ? "active" : ""}`}
+              className={`group hover:bg-secondary [.active]:bg-secondary relative block h-full w-full cursor-pointer p-5 text-sm font-extrabold tracking-wide ${pathname === `/categories/${category.slug}` ? "active" : ""}`}
             >
               <span className="transition duration-300 group-hover:text-amber-100 group-[.active]:text-amber-100">
                 {category.name}
@@ -43,12 +30,12 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <div className="flex items-center justify-between p-4 lg:hidden">
+      <div className="bg-secondary absolute -top-19 left-0 flex items-center justify-between rounded-r-md p-4 lg:hidden">
         <button
           onClick={() => setIsOpen((prev) => !prev)}
-          className="text-white focus:outline-none"
+          className="text-primary focus:outline-none"
         >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
       </div>
 
@@ -62,22 +49,13 @@ export default function Navbar() {
             <X size={28} />
           </button>
         </div>
-        <ul className="flex flex-col gap-4 px-6">
-          {/* <li>
-            <Link
-              href="/"
-              className="block rounded px-2 py-2 hover:bg-amber-600"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-          </li> */}
+        <ul className="flex flex-col gap-4">
           {categories.map((category) => (
             <li key={category.id}>
               <Link
                 prefetch={true}
                 href={`/categories/${category.slug}`}
-                className="block rounded px-2 py-2 hover:bg-amber-600"
+                className="block rounded border-b border-b-cyan-900 px-6 pb-4 tracking-wide text-amber-50 transition-colors duration-300 hover:bg-amber-600"
                 onClick={() => setIsOpen(false)}
               >
                 {category.name}

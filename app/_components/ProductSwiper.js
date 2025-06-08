@@ -7,7 +7,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import Image from "next/image";
 
-export default function ProductSwiper({ images }) {
+export default function ProductSwiper({ images, name }) {
   return (
     <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
       {images.map((img, index) => (
@@ -21,11 +21,11 @@ export default function ProductSwiper({ images }) {
           <div className="relative mx-auto h-auto w-full">
             <Image
               src={img}
-              alt={img}
+              alt={name}
               width={200}
               height={400}
               style={{ width: "100%", height: "100%" }}
-              className="transition-transform duration-500"
+              className="bg-gray-200 transition-transform duration-500"
             />
           </div>
         </SwiperSlide>

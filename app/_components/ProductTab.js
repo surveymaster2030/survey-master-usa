@@ -84,7 +84,7 @@ export default function ProductTabs({ product }) {
                   href={product.dataSheet}
                   download
                   rel="noopener noreferrer"
-                  className="mt-4 inline-block rounded-lg bg-blue-600 px-6 py-3 text-white transition hover:bg-blue-700"
+                  className="bg-mint_green/70 mt-6 inline-block w-fit rounded-md px-8 py-4 text-xs font-medium tracking-wider text-white transition-all duration-300 hover:px-10"
                 >
                   Download (PDF)
                 </a>

@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { MapPin, Mail } from "lucide-react";
+import NewsletterForm from "./NewsletterForm";
 // components/Footer.tsx
 export default function Footer() {
   return (
     <footer className="bg-secondary mt-20 text-white">
-      <div className="relative -top-10 mx-auto flex w-full max-w-2/3 flex-col items-center justify-around rounded-md bg-teal-600 p-6 px-10 lg:flex-row">
+      {/* <div className="relative -top-10 mx-auto flex w-full max-w-2/3 flex-col items-center justify-around rounded-md bg-teal-600 p-6 px-10 lg:flex-row">
         <div className="flex flex-col">
           <h2 className="mb-2 text-2xl font-extrabold md:text-3xl">
             SurvayM Newsletter
@@ -25,7 +26,8 @@ export default function Footer() {
             Subscribe
           </button>
         </div>
-      </div>
+      </div> */}
+      <NewsletterForm />
 
       <div className="mx-auto grid max-w-3/4 grid-cols-1 gap-8 px-8 py-16 md:grid-cols-4">
         <div>
