@@ -10,7 +10,36 @@ export async function generateStaticParams() {
     slug: product.slug,
   }));
 }
+export function generateMetadata({ params }) {
+  const product = products.find((p) => p.slug === params.slug);
 
+  if (!product) {
+    return {
+      title: "Product Not Found | Survey Master",
+      description: "This product does not exist.",
+    };
+  }
+
+  return {
+    title: `${product.name}`,
+    description: `${product.subName || "Professional surveying equipment"} now available.`,
+    openGraph: {
+      title: `${product.name} | Survey Master`,
+      description: `${product.subName || "Surveying tool"} - check out specs and details.`,
+      url: `https://survay-master.vercel.app/products/${params.slug}`,
+      siteName: "Survey Master",
+      images: [
+        {
+          url: product.images?.[0] || "/images/device1.png",
+          width: 1200,
+          height: 630,
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+  };
+}
 export default function ProductPage({ params }) {
   const product = products.find((p) => p.slug === params.slug);
 

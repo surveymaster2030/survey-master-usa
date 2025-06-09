@@ -14,12 +14,20 @@
   /* --font-poppins: "Poppins", sans-serif; */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: light;
+    background: transparent;
+    color: black;
+  }
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -28,7 +36,10 @@ body {
   color: var(--foreground);
   font-family: var(--font-poppins);
 }
-
+.swiper-button-prev,
+.swiper-button-next {
+  color: #174846 !important;
+}
 .swiper-pagination-bullet {
   width: 10px !important;
   height: 10px !important;

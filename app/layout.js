@@ -16,6 +16,7 @@ const manrope = Manrope({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://survay-master.vercel.app"),
   title: {
     default: "Survey Master",
     template: "%s | Survey Master",

@@ -30,12 +30,12 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <div className="bg-secondary absolute -top-19 left-0 flex items-center justify-between rounded-r-md p-4 lg:hidden">
+      <div className="absolute -top-19 left-2 flex items-center justify-between rounded-r-md p-4 lg:hidden">
         <button
           onClick={() => setIsOpen((prev) => !prev)}
           className="text-primary focus:outline-none"
         >
-          {isOpen ? <X size={32} /> : <Menu size={32} />}
+          {isOpen ? <X size={36} /> : <Menu size={36} />}
         </button>
       </div>
 
@@ -49,7 +49,7 @@ export default function Navbar() {
             <X size={28} />
           </button>
         </div>
-        <ul className="flex flex-col gap-4">
+        <ul className="z-50 flex flex-col gap-4">
           {categories.map((category) => (
             <li key={category.id}>
               <Link

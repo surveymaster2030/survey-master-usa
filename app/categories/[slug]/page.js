@@ -9,6 +9,37 @@ export function generateStaticParams() {
   }));
 }
 
+export function generateMetadata({ params }) {
+  const category = categories.find((cat) => cat.slug === params.slug);
+
+  if (!category) {
+    return {
+      title: "Category Not Found | Survey Master",
+      description: "This category does not exist.",
+    };
+  }
+
+  return {
+    title: `${category.name}`,
+    description: `Discover our top surveying tools in the ${category.name} category.`,
+    openGraph: {
+      title: `${category.name} | Survey Master`,
+      description: `Discover our top surveying tools in the ${category.name} category.`,
+      url: `https://survay-master.vercel.app/categories/${params.slug}`,
+      siteName: "Survey Master",
+      images: [
+        {
+          url: "/images/device1.png",
+          width: 1200,
+          height: 630,
+        },
+      ],
+      locale: "en_US",
+      type: "website",
+    },
+  };
+}
+
 export default async function page({ params }) {
   const category = categories.find((cat) => cat.slug === params.slug);
 

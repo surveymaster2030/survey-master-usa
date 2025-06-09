@@ -76,7 +76,7 @@ export default function HeroSlider() {
       <div className="custom-pagination pointer-events-auto absolute top-1/2 left-8 z-50 flex -translate-y-1/2 flex-col gap-4"></div>
 
       {/* arrows */}
-      <div className="absolute top-1/2 right-6 z-50 flex -translate-y-1/2 flex-col gap-4">
+      <div className="absolute top-1/2 right-6 z-5 flex -translate-y-1/2 flex-col gap-4">
         <button className="swiper-button-prev-custom rounded-full bg-white/40 px-3 py-2 text-xl text-black hover:bg-white/70">
           ←
         </button>

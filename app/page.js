@@ -7,6 +7,9 @@ import TopCategories from "./_components/TopCategories";
 import VideoCenter from "./_components/VideoCenter";
 import AboutUs from "./_components/AboutUs";
 
+import { products } from "@/data/products";
+import { categories } from "@/data/categories";
+
 const latestPro = [
   { id: "01", name: "eTS8", cat: "GNSS", imageURL: "/images/device1.png" },
   { id: "02", name: "eTS8", cat: "GNSS", imageURL: "/images/device2.png" },
@@ -36,6 +39,9 @@ export const metadata = {
   },
 };
 
+const latestCategories = categories.filter((cat) =>
+  [1, 6, 3, 5].includes(cat.id),
+);
 export default function Home() {
   return (
     <>
@@ -50,7 +56,7 @@ export default function Home() {
       <MainProduct />
       <TopProducts />
       <OneProduct />
-      <TopCategories />
+      <TopCategories latestCategories={latestCategories} />
       <VideoCenter />
       <AboutUs />
     </>
