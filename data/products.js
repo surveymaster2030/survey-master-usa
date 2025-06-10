@@ -164,7 +164,7 @@ export const products = [
   },
   {
     id: 110,
-    name: "RDC 80",
+    name: "RDC80",
     subName: "Surveying M rugged Android 13 tablet",
     description: [
       "The Surveying M Tablet is a robust Android 13 device engineered for high-precision GIS data collection in challenging environments. Equipped with an 8-inch 1280x800 FHD display offering 800 nits brightness, it ensures clear visibility under direct sunlight. Powered by an 8-core 2.0GHz processor, coupled with 6GB RAM and 128GB internal storage, it delivers efficient performance for demanding applications.",

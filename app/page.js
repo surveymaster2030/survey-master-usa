@@ -10,12 +10,6 @@ import AboutUs from "./_components/AboutUs";
 import { products } from "@/data/products";
 import { categories } from "@/data/categories";
 
-const latestPro = [
-  { id: "01", name: "eTS8", cat: "GNSS", imageURL: "/images/device1.png" },
-  { id: "02", name: "eTS8", cat: "GNSS", imageURL: "/images/device2.png" },
-  { id: "03", name: "eTS8", cat: "GNSS", imageURL: "/images/device3.png" },
-];
-
 export const metadata = {
   title: {
     default: "Home | Survey Master",
@@ -39,15 +33,18 @@ export const metadata = {
   },
 };
 
+const latestProductsInHome = products.filter((item) =>
+  [101, 110, 107].includes(item.id),
+);
+
+const topProductsInHome = products.filter((item) =>
+  [101, 107, 110, 105].includes(item.id),
+);
+
 const topCategoriesInHome = categories.filter((cat) =>
   [1, 6, 3, 5].includes(cat.id),
 );
-const latestProductsInHome = products.filter((item) =>
-  [101, 104, 103].includes(item.id),
-);
-const topProductsInHome = products.filter((item) =>
-  [101, 103, 104, 105].includes(item.id),
-);
+
 export default function Home() {
   return (
     <>
