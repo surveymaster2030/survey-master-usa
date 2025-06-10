@@ -12,23 +12,22 @@ import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
 import Link from "next/link";
 
-export default function TopCategories({ latestCategories }) {
+export default function TopCategories({ topCategoriesInHome }) {
   return (
-    <ScrollFadeIn delay={0.2}>
-      <section className="relative mt-10 py-12">
-        <div className="mb-10 text-center">
-          <p className="text-sm font-semibold text-orange-500">
-            For More Products
-          </p>
+    <section className="relative mt-10 py-12">
+      <div className="mb-10 text-center">
+        <p className="text-sm font-semibold text-orange-500">
+          For More Products
+        </p>
 
-          <h2 className="text-secondary relative mt-1 inline-block text-4xl font-extrabold">
-            Explore Categories
-            <span className="relative mt-2 block h-1 w-24 rounded-2xl bg-orange-500">
-              <span className="absolute top-1/2 -right-2 h-1 w-1 -translate-y-1/2 rounded-full bg-orange-500"></span>
-            </span>
-          </h2>
-        </div>
-
+        <h2 className="text-secondary relative mt-1 inline-block text-4xl font-extrabold">
+          Explore Categories
+          <span className="relative mt-2 block h-1 w-24 rounded-2xl bg-orange-500">
+            <span className="absolute top-1/2 -right-2 h-1 w-1 -translate-y-1/2 rounded-full bg-orange-500"></span>
+          </span>
+        </h2>
+      </div>
+      <ScrollFadeIn delay={0.2}>
         <div className="flex w-full justify-center gap-2 px-4 lg:mx-auto lg:max-w-4/5">
           <Swiper
             slidesPerView={1}
@@ -57,7 +56,7 @@ export default function TopCategories({ latestCategories }) {
             }}
             loop={true}
           >
-            {latestCategories.map((product, index) => (
+            {topCategoriesInHome.map((product, index) => (
               <SwiperSlide
                 key={index}
                 className="relative h-110 w-72 overflow-hidden rounded-md shadow-sm hover:shadow-md"
@@ -79,7 +78,7 @@ export default function TopCategories({ latestCategories }) {
             ))}
           </Swiper>
         </div>
-      </section>
-    </ScrollFadeIn>
+      </ScrollFadeIn>
+    </section>
   );
 }

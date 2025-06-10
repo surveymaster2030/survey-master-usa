@@ -12,6 +12,7 @@ export const products = [
     Specifications: "/images/e80/Specifications.jpg",
     dataSheet: "/images/e80/e80.pdf",
     categoryId: 1,
+    categoryName: "GNSS",
     slug: "e80",
   },
   {
@@ -23,10 +24,11 @@ export const products = [
       "Designed for adaptability, the OSC system supports both single and multi-sensor configurations, making it suitable for a wide range of applications including road modeling, infrastructure inspection, and urban asset mapping. The core unit is built on an industrial-grade stabilization platform with automated IMU calibration, ensuring consistent data integrity even in curved or uneven terrain.",
       "With seamless data fusion and integrated software for trajectory computation and point cloud generation, the OSC system transforms mobile surveying into an efficient, one-pass operation. Its robust structure, precise synchronization, and vehicle-agnostic design make it a field-proven solution for survey professionals operating at scale.",
     ],
-    images: [""],
+    images: [null],
     Specifications: "/images/osc/Specifications.jpg",
     dataSheet: "/images/osc/osc.pdf",
     categoryId: 2,
+    categoryName: "SLAM",
     slug: "osc",
   },
   {
@@ -42,6 +44,7 @@ export const products = [
     Specifications: "/images/p9iv/Specifications.jpg",
     dataSheet: "/images/p9iv/p9iv.pdf",
     categoryId: 8,
+    categoryName: "Accessories",
     slug: "p9iv",
   },
   {
@@ -61,6 +64,7 @@ export const products = [
     Specifications: "/images/smdl/Specifications.jpg",
     dataSheet: "/images/smdl/smdl.pdf",
     categoryId: 6,
+    categoryName: "Optical Systems",
     slug: "smdl",
   },
   {
@@ -76,6 +80,7 @@ export const products = [
     Specifications: "/images/gdl32x/Specifications.jpg",
     dataSheet: "/images/gdl32x/gdl32x.pdf",
     categoryId: 6,
+    categoryName: "Optical Systems",
     slug: "gdl32x",
   },
   {
@@ -95,6 +100,7 @@ export const products = [
     Specifications: "/images/al4-3/Specifications.jpg",
     dataSheet: "/images/al4-3/al4-3.pdf",
     categoryId: 6,
+    categoryName: "Optical Systems",
     slug: "al4-3",
   },
   {
@@ -115,6 +121,7 @@ export const products = [
     Specifications: "/images/sm101/Specifications.jpg",
     dataSheet: "/images/sm101/sm101.pdf",
     categoryId: 6,
+    categoryName: "Optical Systems",
     slug: "sm101",
   },
   {
@@ -131,6 +138,7 @@ export const products = [
     Specifications: "/images/sm-u1/Specifications.jpg",
     dataSheet: "/images/sm-u1/sm-u1.pdf",
     categoryId: 5,
+    categoryName: "Marine Systems",
     slug: "sm-u1",
   },
   {
@@ -147,6 +155,7 @@ export const products = [
     Specifications: "/images/sm-u2/Specifications.jpg",
     dataSheet: "/images/sm-u2/sm-u2.pdf",
     categoryId: 5,
+    categoryName: "Marine Systems",
     slug: "sm-u2",
   },
 ];

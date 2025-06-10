@@ -39,8 +39,14 @@ export const metadata = {
   },
 };
 
-const latestCategories = categories.filter((cat) =>
+const topCategoriesInHome = categories.filter((cat) =>
   [1, 6, 3, 5].includes(cat.id),
+);
+const latestProductsInHome = products.filter((item) =>
+  [101, 104, 103].includes(item.id),
+);
+const topProductsInHome = products.filter((item) =>
+  [101, 103, 104, 105].includes(item.id),
 );
 export default function Home() {
   return (
@@ -48,15 +54,15 @@ export default function Home() {
       <HeroSlider />
       <section className="relative z-10 mt-[-50px] flex w-full items-center justify-center px-4 lg:container lg:mx-auto">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-          {latestPro.map((item) => (
+          {latestProductsInHome.map((item) => (
             <LatestProducts key={item.id} item={item} />
           ))}
         </div>
       </section>
       <MainProduct />
-      <TopProducts />
+      <TopProducts topProductsInHome={topProductsInHome} />
       <OneProduct />
-      <TopCategories latestCategories={latestCategories} />
+      <TopCategories topCategoriesInHome={topCategoriesInHome} />
       <VideoCenter />
       <AboutUs />
     </>

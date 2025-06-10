@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function OneProduct() {
   return (
-    <section className="relative mt-10 h-115 w-full overflow-hidden">
+    <section className="relative mt-6 h-115 w-full overflow-hidden">
       <div className="absolute top-8 z-10 w-8/10 rounded-r-xl bg-white/80 p-5 text-right lg:w-3/5">
         <h2 className="text-secondary text-6xl font-extrabold">eTS2</h2>
         <h4 className="text-secondary text-2xl font-semibold">

@@ -1,6 +1,7 @@
 import Script from "next/script";
 import { Manrope } from "next/font/google";
 import "./globals.css";
+import ScrollFadeIn from "./_components/ScrollFadeIn";
 
 import Navbar from "./_components/Navbar";
 import TopHeader from "./_components/TopHeader";
@@ -60,8 +61,10 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <header>
-          <TopHeader />
-          <Navbar />
+          <ScrollFadeIn delay={0.2}>
+            <TopHeader />
+            <Navbar />
+          </ScrollFadeIn>
         </header>
         <main>
           {/* <PageTransitionLoader /> */}
