@@ -14,7 +14,7 @@ export default function LatestProducts({ item }) {
             alt={item.name}
           />
           <div className="p-7">
-            <h4 className="text-mint_green mb-3 text-center">
+            <h4 className="text-mint_green mb-6 text-center">
               {item.categoryName}
             </h4>
             <h2 className="text-center text-4xl font-semibold">{item.name}</h2>

@@ -18,7 +18,7 @@ const latestPro = [
 
 export const metadata = {
   title: {
-    default: "Survey Master - Home",
+    default: "Home | Survey Master",
     template: "%s | Survey Master",
   },
   description: "When you can collect all surveying tools from one place.",

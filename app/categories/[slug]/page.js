@@ -67,8 +67,8 @@ export default async function page({ params }) {
             >
               <Image
                 width={400}
-                height={550}
-                src={product.images[0]}
+                height={600}
+                src={product.images[0] || "/images/placeholderImage.png"}
                 className="h-full w-full rounded-md bg-gray-200 object-cover lg:w-1/3"
                 alt={product.name}
               />

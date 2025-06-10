@@ -33,7 +33,7 @@ export default function Footer() {
         <div>
           <div className="mb-4">
             <Image
-              src="/logo_wh.png"
+              src="/images/logo_wh.png"
               alt="Survey Master Logo"
               className="w-32"
               width={100}

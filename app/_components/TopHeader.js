@@ -14,7 +14,7 @@ export default function TopHeader() {
     <div className="container mx-auto flex items-center justify-around">
       <Link href="/" className="ml-14 lg:ml-0">
         <Image
-          src="/logo.png"
+          src="/images/logo.png"
           alt="logo"
           className="p-3"
           width={261}

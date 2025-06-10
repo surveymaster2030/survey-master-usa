@@ -1,7 +1,6 @@
 import Script from "next/script";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import ScrollFadeIn from "./_components/ScrollFadeIn";
 
 import Navbar from "./_components/Navbar";
 import TopHeader from "./_components/TopHeader";
@@ -30,9 +29,9 @@ export const metadata = {
     siteName: "Survey Master",
     images: [
       {
-        url: "images/device1.png",
-        width: 1200,
-        height: 630,
+        url: "logo_wh.png",
+        width: 600,
+        height: 600,
       },
     ],
     locale: "en_US",
@@ -61,10 +60,8 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <header>
-          <ScrollFadeIn delay={0.2}>
-            <TopHeader />
-            <Navbar />
-          </ScrollFadeIn>
+          <TopHeader />
+          <Navbar />
         </header>
         <main>
           {/* <PageTransitionLoader /> */}
