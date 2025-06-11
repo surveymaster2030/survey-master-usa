@@ -5,28 +5,6 @@ import NewsletterForm from "./NewsletterForm";
 export default function Footer() {
   return (
     <footer className="bg-secondary mt-20 text-white">
-      {/* <div className="relative -top-10 mx-auto flex w-full max-w-2/3 flex-col items-center justify-around rounded-md bg-teal-600 p-6 px-10 lg:flex-row">
-        <div className="flex flex-col">
-          <h2 className="mb-2 text-2xl font-extrabold md:text-3xl">
-            SurvayM Newsletter
-          </h2>
-          <p className="mb-4 text-xs">
-            Subscribe to our Newsletter to receive SURVAY MASTER updates on
-            product.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-4 rounded-md bg-white p-1.5 sm:flex-row">
-          <input
-            type="email"
-            placeholder="Type your email here"
-            className="px-4 text-black placeholder:text-gray-600 focus:ring-0 focus:outline-none"
-          />
-          <button className="bg-secondary hover:bg-primary rounded-md px-6 py-3 text-xs">
-            Subscribe
-          </button>
-        </div>
-      </div> */}
       <NewsletterForm />
 
       <div className="mx-auto grid max-w-3/4 grid-cols-1 gap-8 px-8 py-16 md:grid-cols-4">

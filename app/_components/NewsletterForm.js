@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ScrollFadeIn from "./ScrollFadeIn";
 
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
@@ -50,40 +51,42 @@ export default function NewsletterForm() {
   };
 
   return (
-    <div className="relative -top-10 mx-auto flex w-full max-w-2/3 flex-col items-center justify-around rounded-md bg-teal-600 p-6 px-10 lg:flex-row">
-      <div className="flex flex-col">
-        <h2 className="mb-2 text-2xl font-extrabold md:text-3xl">
-          SurvayM Newsletter
-        </h2>
-        <p className="mb-4 text-xs">
-          Subscribe to our Newsletter to receive SURVAY MASTER updates on
-          product.
-        </p>
-      </div>
-
-      <form
-        onSubmit={handleSubmit}
-        className="relative flex flex-col gap-4 rounded-md bg-white p-1.5 sm:flex-row"
-      >
-        <input
-          type="text"
-          placeholder="Type your email here"
-          className="px-4 text-black placeholder:text-gray-600 focus:ring-0 focus:outline-none"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button
-          type="submit"
-          className="bg-secondary hover:bg-primary cursor-pointer rounded-md px-6 py-3 text-xs"
-        >
-          Subscribe
-        </button>
-        {status && (
-          <p className="absolute -bottom-6 mt-2 text-xs text-gray-100">
-            {status}
+    <ScrollFadeIn delay={0.2}>
+      <div className="relative -top-10 mx-auto flex w-full max-w-2/3 flex-col items-center justify-around rounded-md bg-teal-600 p-6 px-10 lg:flex-row">
+        <div className="flex flex-col">
+          <h2 className="mb-2 text-2xl font-extrabold md:text-3xl">
+            SurvayM Newsletter
+          </h2>
+          <p className="mb-4 text-xs">
+            Subscribe to our Newsletter to receive SURVAY MASTER updates on
+            product.
           </p>
-        )}
-      </form>
-    </div>
+        </div>
+
+        <form
+          onSubmit={handleSubmit}
+          className="relative flex flex-col gap-4 rounded-md bg-white p-1.5 sm:flex-row"
+        >
+          <input
+            type="text"
+            placeholder="Type your email here"
+            className="px-4 text-black placeholder:text-gray-600 focus:ring-0 focus:outline-none"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button
+            type="submit"
+            className="bg-secondary hover:bg-primary cursor-pointer rounded-md px-6 py-3 text-xs"
+          >
+            Subscribe
+          </button>
+          {status && (
+            <p className="absolute -bottom-6 mt-2 text-xs text-gray-100">
+              {status}
+            </p>
+          )}
+        </form>
+      </div>
+    </ScrollFadeIn>
   );
 }
