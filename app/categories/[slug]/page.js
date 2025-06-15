@@ -25,11 +25,11 @@ export function generateMetadata({ params }) {
     openGraph: {
       title: `${category.name} | Survey Master`,
       description: `Discover our top surveying tools in the ${category.name} category.`,
-      url: `https://survay-master.vercel.app/categories/${params.slug}`,
+      url: `https://www.surveymasterusa.com/categories/${params.slug}`,
       siteName: "Survey Master",
       images: [
         {
-          url: "/images/device1.png",
+          url: "/images/logo_wh.png",
           width: 1200,
           height: 630,
         },

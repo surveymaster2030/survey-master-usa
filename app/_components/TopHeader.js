@@ -62,7 +62,7 @@ export default function TopHeader() {
           />
           <div>
             <p className="text-[10px] text-gray-500">Send email</p>
-            <h4 className="text-xs font-semibold">info@survaymaster.us</h4>
+            <h4 className="text-xs font-semibold">sales@survaymasterusa.com</h4>
           </div>
         </div>
         <div className="flex border-l border-l-gray-300 p-3.5">

@@ -16,7 +16,7 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://survay-master.vercel.app"),
+  metadataBase: new URL("https://www.surveymasterusa.com"),
   title: {
     default: "Survey Master",
     template: "%s | Survey Master",
@@ -25,11 +25,11 @@ export const metadata = {
   openGraph: {
     title: "Survey Master",
     description: "When you can collect all surveying tools from one place.",
-    url: "https://survay-master.vercel.app",
+    url: "https://www.surveymasterusa.com",
     siteName: "Survey Master",
     images: [
       {
-        url: "logo_wh.png",
+        url: "images/logo_wh.png",
         width: 600,
         height: 600,
       },

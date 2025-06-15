@@ -61,7 +61,7 @@ export default function Footer() {
               strokeWidth={1.5}
               absoluteStrokeWidth={true}
             />{" "}
-            info@survaymaster.us
+            sales@survaymasterusa.com
           </p>
           <p className="mt-2 flex items-center gap-2 text-xs text-gray-400">
             <MapPin

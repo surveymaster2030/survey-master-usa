@@ -19,11 +19,11 @@ export const metadata = {
   openGraph: {
     title: "Survey Master - Home",
     description: "When you can collect all surveying tools from one place.",
-    url: "https://survay-master.vercel.app",
+    url: "https://www.surveymasterusa.com",
     siteName: "Survey Master",
     images: [
       {
-        url: "images/device1.png",
+        url: "images/logo_wh.png",
         width: 1200,
         height: 630,
       },
