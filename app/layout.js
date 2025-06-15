@@ -29,7 +29,7 @@ export const metadata = {
     siteName: "Survey Master",
     images: [
       {
-        url: "images/logo_wh.png",
+        url: "images/logo-01.png",
         width: 600,
         height: 600,
       },
