@@ -15,7 +15,7 @@ export const metadata = {
     default: "Home | Survey Master",
     template: "%s | Survey Master",
   },
-  description: "When you can collect all surveying tools from one place.",
+  description: "Where you can collect all surveying tools from one place.",
   openGraph: {
     title: "Survey Master - Home",
     description: "When you can collect all surveying tools from one place.",
@@ -24,8 +24,8 @@ export const metadata = {
     images: [
       {
         url: "images/logo-01.png",
-        width: 600,
-        height: 600,
+        width: 630,
+        height: 630,
       },
     ],
     locale: "en_US",

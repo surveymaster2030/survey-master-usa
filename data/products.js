@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 101,
-    name: "E80",
+    name: "E80-M60",
     subName: "High-precision GNSS RTK system",
     description: [
       "The E80 + M60 GNSS RTK System is a powerful survey-grade positioning solution designed for reliable, real-time field performance. With the E80 operating as a robust base station and the M60 as a dynamic rover, the system supports 1408-channel, full-constellation tracking including GPS, GLONASS, BeiDou, Galileo, and QZSS.",
@@ -17,7 +17,7 @@ export const products = [
     dataSheet: "/images/e80/e80.pdf",
     categoryId: 1,
     categoryName: "GNSS",
-    slug: "e80",
+    slug: "e80-m60",
   },
   {
     id: 102,

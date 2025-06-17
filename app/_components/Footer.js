@@ -19,7 +19,7 @@ export default function Footer() {
             />
           </div>
           <p className="text-xs text-gray-400">
-            There are many variations <br></br> of passages of lorem ipsu
+            Where you can collect all<br></br> surveying tools from one place.
           </p>
         </div>
 
@@ -29,10 +29,10 @@ export default function Footer() {
             <span className="bg-mint_green absolute top-1/2 -right-2 h-1 w-1 -translate-y-1/2 rounded-full"></span>
           </span>
           <ul className="mt-5 space-y-1 text-sm text-gray-400">
-            <li>GNSS Receivers</li>
-            <li>Total Stations</li>
-            <li>Laser Scanners</li>
-            <li>Accessories</li>
+            <li>GNSS Systems</li>
+            <li>SLAM</li>
+            <li>Machine Control Solutions</li>
+            <li>Precision Agriculture</li>
           </ul>
         </div>
         <div className="relative">
@@ -41,9 +41,9 @@ export default function Footer() {
             <span className="bg-mint_green absolute top-1/2 -right-2 h-1 w-1 -translate-y-1/2 rounded-full"></span>
           </span>
           <ul className="mt-5 space-y-1 text-sm text-gray-400">
-            <li>GNSS Receivers</li>
-            <li>Total Stations</li>
-            <li>Laser Scanners</li>
+            <li>Marine Systems</li>
+            <li>Optical Systems</li>
+            <li>Radio & Antenna</li>
             <li>Accessories</li>
           </ul>
         </div>

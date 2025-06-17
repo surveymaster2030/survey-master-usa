@@ -21,10 +21,10 @@ export const metadata = {
     default: "Survey Master",
     template: "%s | Survey Master",
   },
-  description: "When you can collect all surveying tools from one place.",
+  description: "Where you can collect all surveying tools from one place.",
   openGraph: {
     title: "Survey Master",
-    description: "When you can collect all surveying tools from one place.",
+    description: "Where you can collect all surveying tools from one place.",
     url: "https://www.surveymasterusa.com",
     siteName: "Survey Master",
     images: [

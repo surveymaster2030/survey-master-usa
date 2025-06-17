@@ -23,8 +23,8 @@ export default function ProductSwiper({ images, name }) {
               <Image
                 src={img}
                 alt={name}
-                width={200}
-                height={400}
+                width={400}
+                height={600}
                 style={{ width: "100%", height: "100%" }}
                 className="bg-gray-200 transition-transform duration-500"
               />
@@ -35,8 +35,8 @@ export default function ProductSwiper({ images, name }) {
         <Image
           src="/images/placeholderImage.png"
           alt="No Image Available"
-          width={200}
-          height={400}
+          width={400}
+          height={600}
           style={{ width: "100%", height: "100%" }}
           className="rounded-md bg-gray-200 transition-transform duration-500"
         />
