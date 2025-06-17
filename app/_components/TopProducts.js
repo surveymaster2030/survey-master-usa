@@ -16,7 +16,7 @@ export default function TopProducts({ topProductsInHome }) {
   return (
     <section className="relative mt-16 py-12">
       <div className="bg-light_beige absolute inset-0 top-0 -z-10 h-70 overflow-hidden">
-        <div className="h-full w-full bg-[url(/images/bg.png)] bg-size-[auto_200] bg-position-[calc(50%+22rem)_-2rem] bg-no-repeat opacity-5"></div>
+        <div className="h-full w-full bg-[url(/images/bg.png)] bg-size-[auto_580] bg-position-[calc(50%+22rem)_-2rem] bg-no-repeat opacity-5"></div>
       </div>
 
       <div className="mb-10 text-center">
