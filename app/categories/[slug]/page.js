@@ -29,8 +29,8 @@ export function generateMetadata({ params }) {
       siteName: "Survey Master",
       images: [
         {
-          url: "/images/logo-01.png",
-          width: 630,
+          url: "/images/logo_wh.png",Add commentMore actions
+          width: 1200,
           height: 630,
         },
       ],
