@@ -4,7 +4,7 @@ import ScrollFadeIn from "./ScrollFadeIn";
 export default function VideoCenter() {
   return (
     <section className="bg-light_beige relative flex items-center justify-center pb-12">
-      <div className="absolute h-full w-full bg-[url(/images/bg.png)] bg-size-[auto_200] bg-position-[calc(50%-30rem)_8rem] bg-no-repeat opacity-5"></div>
+      <div className="absolute h-full w-full bg-[url(/images/bg.png)] bg-size-[auto_580] bg-position-[calc(50%-30rem)_8rem] bg-no-repeat opacity-5"></div>
       <div className="w-full px-5 lg:w-4/6">
         <div>
           <h2 className="mb-5 text-center text-5xl font-bold text-[#EBE8D6] lg:text-left lg:text-9xl">
