@@ -25,6 +25,10 @@ export const metadata = {
   openGraph: {
     title: "Survey Master",
     description: "Where you can collect all surveying tools from one place.",
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon.ico",
+    },
     url: "https://www.surveymasterusa.com",
     siteName: "Survey Master",
     images: [
