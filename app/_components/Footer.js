@@ -66,12 +66,12 @@ export default function Footer() {
           <p className="mt-2 flex items-center gap-2 text-xs text-gray-400">
             <MapPin
               className="mr-3"
-              size={22}
+              size={38}
               color="#FF7600"
               strokeWidth={1.5}
               absoluteStrokeWidth={true}
             />{" "}
-            80 broklyn golden street, New York, USA
+            30 N. Gould Street, Suite 52519, Sheridan, Wyoming 82801, USA
           </p>
         </div>
       </div>
