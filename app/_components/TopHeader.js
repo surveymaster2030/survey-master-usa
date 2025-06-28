@@ -75,10 +75,10 @@ export default function TopHeader() {
           />
           <div>
             <p className="text-[10px] text-gray-500">
-              30 N Gould St, Ste 52519 Sheridan Wy 82801
+              30 N. Gould Street, Suite 52519
             </p>
             <h4 className="text-xs font-semibold text-gray-800">
-              Wyoming, USA
+              Sheridan, Wyoming 82801, USA
             </h4>
           </div>
         </div>
