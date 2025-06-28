@@ -60,7 +60,7 @@ export default function Home() {
       <TopProducts topProductsInHome={topProductsInHome} />
       <OneProduct />
       <TopCategories topCategoriesInHome={topCategoriesInHome} />
-      <VideoCenter />
+      {/*<VideoCenter />*/}
       <AboutUs />
     </>
   );
