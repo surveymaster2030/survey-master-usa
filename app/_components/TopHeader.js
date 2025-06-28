@@ -22,7 +22,7 @@ export default function TopHeader() {
         />
       </Link>
       <div className="hidden space-x-3 lg:flex">
-        <div className="flex items-center justify-center space-x-2">
+        <div className="hidden items-center justify-center space-x-2">
           <a
             className="bg-light_beige rounded-full p-2 transition-all duration-150 hover:rounded-md"
             target="blank"
@@ -74,9 +74,11 @@ export default function TopHeader() {
             absoluteStrokeWidth={true}
           />
           <div>
-            <p className="text-[10px] text-gray-500">380 St Kilda Road</p>
+            <p className="text-[10px] text-gray-500">
+              30 N Gould St, Ste 52519 Sheridan Wy 82801
+            </p>
             <h4 className="text-xs font-semibold text-gray-800">
-              California, USA
+              Wyoming, USA
             </h4>
           </div>
         </div>
